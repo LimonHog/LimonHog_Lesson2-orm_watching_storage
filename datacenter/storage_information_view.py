@@ -1,4 +1,3 @@
-from datacenter.models import Passcard
 from datacenter.models import Visit
 from django.shortcuts import render
 from datacenter.helper_functions import get_duration, format_duration
@@ -16,8 +15,8 @@ def storage_information_view(request):
 
         who_entered = visit.passcard
         entered_at = localtime(visit.entered_at)
-        
-        non_closed_visits.append( 
+
+        non_closed_visits.append(
             {
                 'who_entered': who_entered,
                 'entered_at': entered_at,
