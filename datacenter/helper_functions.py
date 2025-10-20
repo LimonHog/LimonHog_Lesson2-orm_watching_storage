@@ -4,7 +4,7 @@ from datetime import datetime, timezone
 
 def get_duration(visit):
     entered_at = localtime(visit.entered_at)
-    if visit.leaved_at :
+    if visit.leaved_at:
         leaved_at = localtime(visit.leaved_at)
         delta = leaved_at - entered_at
     else:
